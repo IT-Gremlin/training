@@ -1,0 +1,85 @@
+/*
+  style.css = how the page LOOKS.
+
+  Every rule works like this:
+
+    what-to-style {
+      property: value;
+    }
+
+  Change a value, save, refresh the browser, see what happens!
+*/
+
+
+/* ===== The whole page ===== */
+body {
+  margin: 0;                            /* remove the browser's default gap around the edge */
+  font-family: system-ui, sans-serif;   /* a clean, modern font */
+  background: #0f172a;                  /* dark navy background (try changing this!) */
+  color: #e2e8f0;                       /* light grey text */
+}
+
+
+/* ===== The header at the top ===== */
+header {
+  padding: 3rem 1.5rem;   /* space INSIDE the box: top/bottom, left/right */
+  text-align: center;     /* put everything in the middle */
+}
+
+
+/* ===== The box that holds all the cards ===== */
+.cards {                                  /* the dot means "find class=cards" */
+  display: grid;                          /* turn on grid layout */
+  grid-template-columns: repeat(3, 1fr);  /* 3 equal columns side by side */
+  gap: 1rem;                              /* space between the cards */
+  padding: 1.5rem;
+}
+
+
+/* ===== Each single card ===== */
+.card {
+  background: #1e293b;   /* slightly lighter than the page */
+  padding: 1.25rem;
+  border-radius: 12px;   /* rounded corners (try 0 or 40px!) */
+}
+
+
+/* ===== The button ===== */
+button {
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 999px;   /* a really big number = pill shape */
+  background: #38bdf8;    /* bright blue */
+  color: #0f172a;
+  font-size: 1rem;
+  cursor: pointer;        /* shows the little hand when you hover */
+}
+
+
+/* ===== Footer at the bottom ===== */
+footer {
+  text-align: center;
+  padding: 1rem;
+  opacity: 0.6;   /* a bit see-through so it's less loud */
+}
+
+
+/* ===== LIGHT THEME =====
+   These only kick in when script.js adds class="light" to the body. */
+body.light {
+  background: #f8fafc;
+  color: #0f172a;
+}
+
+body.light .card {
+  background: #e2e8f0;
+}
+
+
+/* ===== PHONES / SMALL SCREENS =====
+   "If the screen is 700px wide or less, do this instead." */
+@media (max-width: 700px) {
+  .cards {
+    grid-template-columns: 1fr;   /* 1 column, so cards stack on top of each other */
+  }
+}

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<!-- ^ Tells the browser "this is a modern HTML page". Always the first line. -->
+
+<html lang="en">
+<!-- Everything on the page lives inside <html> ... </html> -->
+
+<head>
+  <!-- The <head> is behind-the-scenes info. None of it shows on the page itself. -->
+
+  <!-- Lets the page use any letters, symbols and emojis 🎉 -->
+  <meta charset="UTF-8">
+
+  <!-- Makes the page fit properly on a phone screen -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- The text that shows on the browser tab -->
+  <title>My Site</title>
+
+  <!-- Links our CSS file, which controls how everything LOOKS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!-- The <body> is everything you can actually SEE on the page -->
+
+  <!-- ===== HEADER: the big bit at the top ===== -->
+  <header>
+    <!-- h1 = the biggest heading. Only use one per page. -->
+    <h1>Hi, I'm Rees 👋</h1>
+
+    <!-- p = a paragraph of normal text -->
+    <p>I like computers, games and taking things apart.</p>
+
+    <!-- A button. It does nothing yet... script.js gives it a job! -->
+    <button id="toggle">Toggle theme</button>
+  </header>
+
+  <!-- ===== MAIN: the main content of the page ===== -->
+  <!-- class="cards" is a name tag so the CSS can find and style it -->
+  <main class="cards">
+
+    <!-- Each <section> is one card. Copy and paste one to add more! -->
+    <section class="card">
+      <h2>🖥️ Tech</h2>
+      <p>Today I took a laptop apart and learned what every part does.</p>
+    </section>
+
+    <section class="card">
+      <h2>🎮 Games</h2>
+      <p>Write about your favourite games here.</p>
+    </section>
+
+    <section class="card">
+      <h2>⚽ Other stuff</h2>
+      <p>Sport, music, anything you're into.</p>
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER: the small bit at the bottom ===== -->
+  <footer>
+    <p>Made by me, 2026</p>
+  </footer>
+
+  <!-- Loads our JavaScript file. It goes at the BOTTOM so the
+       page has loaded before the script tries to find the button. -->
+  <script src="script.js"></script>
+</body>
+
+</html>
